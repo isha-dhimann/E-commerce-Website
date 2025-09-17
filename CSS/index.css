@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+header .logo h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #222;
+  font-family: "Allura", cursive;
+}
+
+header .logo h2 span {
+  color: navy;
+  font-family: "Allura", cursive;
+}
+
+/* Search Bar */
+header .search-bar {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 30px;
+  position: relative;
+}
+
+header .search-bar input {
+  width: 100%;
+  height: 40px;
+  padding: 0 40px 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-size: 15px;
+}
+
+header .search-bar i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  gap: 25px;
+}
+
+header nav a {
+  list-style: none;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header nav a li {
+  list-style: none;
+}
+
+header nav a:hover {
+  color:navy;
+  text-decoration: underline;
+}
+
+/* Icons */
+header .bag {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: #444;
+  cursor: pointer;
+}
+
+header .bag i:hover {
+  color: rgb(106, 106, 224);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+header .bag .bag-count {
+  position: absolute;
+  top: -10px;   /* thoda upar */
+  right: -10px; /* thoda side me */
+  background: navy;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.home-page {
+  position: relative;
+  width: 100%;
+}
+
+.home-page img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;         
+  right: 10%;       
+  transform: translateY(-50%);
+  color: white;     
+  max-width: 400px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.home-content button {
+  padding: 10px 25px;
+  background: navy;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+
+.home-content button:hover {
+  background: rgb(135, 135, 237);
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 40px 0;
+  letter-spacing: 2px;
+  color: #333;
+  position: relative;
+}
+h1 span {
+  color: rgb(91, 91, 172); 
+}
+
+/* Products Section */
+.products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+  padding: 30px;
+  background: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+/* Product Card */
+.product {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.product h3 {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* Description */
+.product p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  height: 36px;         /* fixed height */
+  overflow: hidden;     /* extra text crop */
+}
+
+/* Price Section */
+.product-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.product-price .new-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.product-price .old-price {
+  font-size: 13px;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.product-price .discount {
+  font-size: 12px;
+  font-weight: bold;
+  color: #2a9d8f;
+  background: #e0f7f4;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Button */
+.product button {
+  background: linear-gradient(135deg, #e63946, #d62828);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.product button:hover {
+  background: linear-gradient(135deg, #c71c2c, #b91d2d);
+  transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
