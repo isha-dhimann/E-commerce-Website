@@ -30,7 +30,7 @@
       </nav>
       <div class="bag">
         <span class="bag-count">0</span>
-        <i class="fa-solid fa-bag-shopping"></i>
+       <a href="Components/bag.html"><i class="fa-solid fa-bag-shopping"></i></a>
       </div>
     </header>
 
@@ -45,8 +45,8 @@
         <button>Shop Now</button>
       </div>
     </div>
-    
-  <h1>LATEST<span> PRODUCTS</span></h1>
+
+    <h1>LATEST<span> PRODUCTS</span></h1>
     <section class="products">
       <!-- <div class="product">
         <img src="Image/pro1.png" alt="Short Kurti" />
@@ -63,7 +63,34 @@
         <button class="add-cart">Add to Cart</button>
       </div> -->
     </section>
-
+    <h1>CONTACT<span> US</span></h1>
+    
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <form onsubmit="showPopup(event)" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <h2>✅ Message Sent!</h2>
+            <p>Thank you for contacting us. We’ll get back to you soon.</p>
+            <button onclick="closePopup()">OK</button>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Footer Section -->
+<footer>
+  <p>© 2025 My E-commerce Website | All Rights Reserved</p>
+</footer>
     <script src="JAVASCRIPT/index.js"></script>
   </body>
 </html>
